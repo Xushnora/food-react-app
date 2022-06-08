@@ -1,0 +1,121 @@
+
+.category {
+
+    &__btnBox {
+        border-bottom: 3px solid #393C49;
+        padding-bottom: 13px;
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #fff;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        margin-right: 32px;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: transparent;
+            display: block;
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        &:focus {
+            color: #EA7C69;
+            &::after {
+                background-color: #EA7C69;
+            }
+        }
+    }
+}
+
+// .activeBtn {
+//     color: #EA7C69;
+
+//     &::after {
+//         background-color: #EA7C69;
+//     }
+// }
+
+.foods {
+    width: 100%;
+    height: 100%;
+
+    &__titleBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+    }
+
+    &__title {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 140%;
+        color: #fff;
+    }
+
+    &__btn {
+        width: 100px;
+        height: 48px;
+        background: #1F1D2B;
+        border: 1px solid #393C49;
+        border-radius: 8px;
+        color: #fff;
+
+        .bx {
+            margin-right: 6px;
+        }
+    }
+
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+
+    }
+
+    &__item {
+        width: 235px;
+        height: 286px;
+        background: #1F1D2B;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: relative;
+        top: -22px;
+    }
+
+    &__name {
+        width: 144px;
+    }
+}

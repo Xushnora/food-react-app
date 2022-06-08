@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+@import "sitebar";
+@import "main";
+@import "rightbox";
+@import "header";
+@import "hero";
+
+body {
+    background-color: #252836;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.rower {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini-container {
+    width: 930px;
+    padding: 0 3px;
+    margin: 0 auto;
+}
+
+
+// Scrool style
+
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(136, 136, 136, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 30px;
+}
