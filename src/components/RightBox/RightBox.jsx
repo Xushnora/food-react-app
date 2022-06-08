@@ -21,7 +21,7 @@ function RightBox({ordersArr, counter}){
             </div>
             <div className="ordersCreate">
                 <ul className="ordersCreate__list">
-                    {ordersArr.map((item, i) => {
+                    {ordersArr && ordersArr.map((item, i) => {
                         return (
                             <li className="ordersCreate__item kind">
                                 <div className="kind__bigBox">

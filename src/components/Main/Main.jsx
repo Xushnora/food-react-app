@@ -9,7 +9,6 @@ import obj from '../../foods.js'
 function Main(){
 
     const [ordersArr, setOrdersArr] = useState([])
-    const [count, setCount] = useState(1)
 
     const handlerList = (item) => {
 
