@@ -6,7 +6,7 @@ const Foods = [
         money: 2.3,
         theRest: 15,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const Foods = [
         money: 2.69,
         theRest: 20,
         foodType: "cold-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const Foods = [
         money: 2.3,
         theRest: 15,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const Foods = [
         money: 2.69,
         theRest: 20,
         foodType: "cold-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const Foods = [
         money: 3.3,
         theRest: 8,
         foodType: "soup",
-        count: 1
+        count: 0
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ const Foods = [
         money: 3.69,
         theRest: 10,
         foodType: "soup",
-        count: 1
+        count: 0
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ const Foods = [
         money: 3.49,
         theRest: 6,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const Foods = [
         money: 2.69,
         theRest: 11,
         foodType: "soup",
-        count: 1
+        count: 0
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ const Foods = [
         money: 2.3,
         theRest: 15,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ const Foods = [
         money: 2.69,
         theRest: 20,
         foodType: "cold-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const Foods = [
         money: 2.3,
         theRest: 15,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ const Foods = [
         money: 2.69,
         theRest: 20,
         foodType: "cold-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 13,
@@ -114,7 +114,7 @@ const Foods = [
         money: 3.3,
         theRest: 8,
         foodType: "soup",
-        count: 1
+        count: 0
     },
     {
         id: 14,
@@ -123,7 +123,7 @@ const Foods = [
         money: 1.6,
         theRest: 5,
         foodType: "soup",
-        count: 1
+        count: 0
     },
     {
         id: 15,
@@ -132,16 +132,34 @@ const Foods = [
         money: 3.49,
         theRest: 14,
         foodType: "hot-dishes",
-        count: 1
+        count: 0
     },
     {
         id: 16,
-        title: "Salted Pasta with mushroom sauce",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEw2yw4bybSyh3hWcdd2LvQ31imrCiBVCUVA&usqp=CAU",
+        title: "Grill",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJeVfAplahTyoKxRvzJv5YltltjhOEgKtfMw&usqp=CAU",
         money: 2.69,
         theRest: 6,
-        foodType: "soup",
-        count: 1
+        foodType: "grill",
+        count: 0
+    },
+    {
+        id: 17,
+        title: "Dessert",
+        img: "https://www.tasteofhome.com/wp-content/uploads/2019/05/Fried-Ice-Cream-Dessert-Bars-_EXPS_SDJJ19_232652_B02_06_1b_rms-2.jpg",
+        money: 1.10,
+        theRest: 10,
+        foodType: "dessert",
+        count: 0
+    },
+    {
+        id: 18,
+        title: "Appetizer",
+        img: "https://www.brit.co/media-library/image.jpg?id=21875252&width=980",
+        money: 3.10,
+        theRest: 10,
+        foodType: "appetizer",
+        count: 0
     },
 ];
 

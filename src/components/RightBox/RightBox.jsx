@@ -1,7 +1,33 @@
-import React from "react";
-import obj from '../../foods.js'
+import React, { useEffect, useState } from "react";
+import Offcanvas from "../Offcanvas/Offcanvas.jsx";
 
-function RightBox({ordersArr, counter}){
+function RightBox({ordersArr, setOrdersArr}){
+
+    const [changedArr, setChangedArr] = useState([])
+    const [total, setTotal] = useState(0)
+
+    useEffect(() => {
+        let counte = 0; 
+        ordersArr && ordersArr.forEach(item => {
+            counte += item.money;
+        });
+        setTotal(counte)
+        let temp = [...new Set(ordersArr && ordersArr.map(item => item))];
+
+        setChangedArr(temp)
+    }, [ordersArr])
+
+
+    const deleteBtn = (id) => {
+        setOrdersArr(ordersArr.filter((item) => {
+            if(item.id === id) {
+                item.count = 0
+            } else {
+                return item
+            }
+        }))
+    }
+
     return(
         <div className="rightbox">
             <div className="orders">
@@ -21,7 +47,7 @@ function RightBox({ordersArr, counter}){
             </div>
             <div className="ordersCreate">
                 <ul className="ordersCreate__list">
-                    {ordersArr && ordersArr.map((item, i) => {
+                    {changedArr && changedArr.map((item, i) => {
                         return (
                             <li className="ordersCreate__item kind">
                                 <div className="kind__bigBox">
@@ -33,13 +59,13 @@ function RightBox({ordersArr, counter}){
                                         </div>
                                     </div>
                                     <div className="kind__counter">
-                                        <div className="kind__count">{item.count}</div>
-                                        <p className="kind__allPrice">$ {item.money}</p>
+                                        <div className="kind__count">{item.counte}</div>
+                                        <p className="kind__allPrice">$ {(item.money * item.counte).toFixed(2)}</p>
                                     </div>
                                 </div>
                                 <div className="kind__delBox">
                                     <input className="kind__input" type="text" name="food" placeholder="Order Note..." />
-                                    <button className="kind__deleteBnt">
+                                    <button onClick={() => deleteBtn(item.id)} className="kind__deleteBnt">
                                         <i className='bx bx-trash-alt'></i>
                                     </button>
                                 </div>
@@ -47,6 +73,20 @@ function RightBox({ordersArr, counter}){
                         )
                     })}
                 </ul>
+            </div>
+            <div className="payment">
+                <div className="payment__box">
+                    <p className="payment__text">Discount</p>
+                    <p className="payment__price">$0</p>
+                </div>
+                <div className="payment__box">
+                    <p className="payment__text">Sub total</p>
+                    <p className="payment__price">$ {total.toFixed(2)}</p>
+                </div>
+                <button className="payment__btn"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Continue to Payment
+                </button>
+                <Offcanvas />
             </div>
         </div>
     )

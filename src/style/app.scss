@@ -5,6 +5,7 @@
 @import "rightbox";
 @import "header";
 @import "hero";
+@import "offcanvas";
 
 body {
     background-color: #252836;
@@ -42,4 +43,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     border-radius: 30px;
+}
+
+
+.offcanvas.offcanvas-end {
+    width: 450px !important;
 }

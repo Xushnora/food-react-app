@@ -4,19 +4,15 @@ import RightBox from "../RightBox/RightBox"
 import Header from "./Header";
 import Hero from "./Hero";
 
-import obj from '../../foods.js'
-
 function Main(){
 
     const [ordersArr, setOrdersArr] = useState([])
 
-    const handlerList = (item) => {
-
-        if(ordersArr.indexOf(item) !== -1) return 
-            setOrdersArr([...ordersArr, item])
-
-    } 
-
+    const ordersHandler = (food) => {
+        let counte = ordersArr.filter(item => item.id === food.id);
+        food.counte = counte.length + 1;
+        setOrdersArr([...ordersArr, food]);
+    }
 
     return(
         <div className="rower">
@@ -26,9 +22,7 @@ function Main(){
             <div className="main">
                 <Header />
                 <Hero 
-                    ordersArr = {ordersArr}
-                    setOrdersArr = {setOrdersArr}
-                    handlerList = {handlerList}
+                    ordersHandler = {ordersHandler}
                 />
             </div>
             <div>

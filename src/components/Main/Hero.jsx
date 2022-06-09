@@ -6,7 +6,7 @@ import obj from '../../foods.js'
 const categoryBtn = ['Hot dishes', 'Cold dishes', 'Soup', 'Grill', 'Appetizer', 'Dessert']
 const typeBtn = ['hot-dishes', 'cold-dishes', 'soup', 'grill', 'appetizer', 'dessert']
 
-function Hero({ ordersArr, setOrdersArr, handlerList}){
+function Hero({ ordersHandler}){
 
 const [cardArr, setCardArr] = useState([])
 
@@ -33,7 +33,8 @@ const handlerClick = (e) => {
                         key={i + 'btn'} 
                         className="category__btn activeBtn"
                         onClick={handlerClick}>
-                    {btn} </button>
+                        {btn}
+                    </button>
                    })}
                </div>
             </div>
@@ -49,7 +50,7 @@ const handlerClick = (e) => {
                     {cardArr.map((item) => {
                         return (
                             <li key={item.id + 'keys'}
-                                onClick = {() => handlerList(item)}
+                                onClick = {() => ordersHandler(item)}
                                 id = {item.id}
                                  className="foods__item">
                                 <img className="foods__img" src={item.img} alt="foods" />
