@@ -1,7 +1,21 @@
 import React from "react";
 import Container from "../../UI/Container";
 
-function Header(){
+import obj from '../../foods.js'
+
+function Header({setCardArr}){
+
+    const searchArr = []
+
+    const handlerSearch = (e) => {
+        obj.forEach((item, i) => {
+            if(item.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())){
+                searchArr.push(item)
+            }
+        });
+        setCardArr(searchArr)
+    }
+
     return(
         <Container>
             <div className="header">
@@ -11,7 +25,7 @@ function Header(){
                 </div>
                 <div className="header__inputBox">
                     <i className='bx bx-search'></i>
-                    <input type="text" placeholder="Search" />
+                    <input onChange={handlerSearch} type="text" placeholder="Search" />
                 </div>
             </div>
         </Container>

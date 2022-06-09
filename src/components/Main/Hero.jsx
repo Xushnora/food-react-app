@@ -6,13 +6,13 @@ import obj from '../../foods.js'
 const categoryBtn = ['Hot dishes', 'Cold dishes', 'Soup', 'Grill', 'Appetizer', 'Dessert']
 const typeBtn = ['hot-dishes', 'cold-dishes', 'soup', 'grill', 'appetizer', 'dessert']
 
-function Hero({ ordersHandler}){
+function Hero({ ordersHandler, cardArr, setCardArr}){
 
-const [cardArr, setCardArr] = useState([])
+// const [cardArr, setCardArr] = useState([])
 
-useEffect(() => {
-    setCardArr(obj)
-}, [])
+// useEffect(() => {
+//     setCardArr(obj)
+// }, [])
                                                                                                         
 
 const handlerClick = (e) => {
