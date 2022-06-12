@@ -8,37 +8,37 @@ let category = [
   {
     title: 'Appereance',
     desc: 'Dark and Light mode, Font size',
-    link: '/apperance',
+    link: '/about',
     icon: 'bx bx-heart'
   },
   {
     title: 'Your Restaurant',
     desc: 'Dark and Light mode, Font size',
-    link: '/your',
+    link: '/portion',
     icon: 'bx bx-store-alt'
   },
   {
     title: 'Products Management',
     desc: 'Manage your product, pricing, etc',
-    link: '/products',
+    link: '/mail',
     icon: 'bx bxs-offer'
   },
   {
     title: 'Notifications',
     desc: 'Customize your notifications',
-    link: '/notication',
+    link: '/notification',
     icon: 'bx bx-bell'
   },
   {
     title: 'Security',
     desc: 'Configure Password, PIN, etc',
-    link: '/security',
+    link: '/settings',
     icon: 'bx bx-lock-open'
   },
   {
     title: 'About Us',
     desc: 'Find out more about Posly',
-    link: '/about',
+    link: '/login',
     icon: 'bx bx-error-circle'
   },
 ]
