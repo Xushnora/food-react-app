@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from "react";
 import Container from "../../UI/Container";
+import { useTranslation } from "react-i18next";
+import '../../components/i18n'
 
-import obj from '../../foods.js'
-
-const categoryBtn = ['Hot dishes', 'Cold dishes', 'Soup', 'Grill', 'Appetizer', 'Dessert']
-const typeBtn = ['hot-dishes', 'cold-dishes', 'soup', 'grill', 'appetizer', 'dessert']
-
-function Hero({ ordersHandler, cardArr, setCardArr}){
-
-// const [cardArr, setCardArr] = useState([])
-
-// useEffect(() => {
-//     setCardArr(obj)
-// }, [])
-                                                                                                        
-
-const handlerClick = (e) => {
-        const filteredArr = obj.filter((item) => {
-            return item.foodType === e.target.id
-        })
-        setCardArr(filteredArr);
-}
-
+function Hero({ 
+    ordersHandler, 
+    cardArr, 
+    handlerClick, 
+    typeBtn, 
+    categoryBtn,
+    changeLanguage
+}){    
+    
+    const {t, i18n} = useTranslation();
 
     return(
         <Container>
@@ -40,11 +30,12 @@ const handlerClick = (e) => {
             </div>
             <div className="foods">
                 <div className="foods__titleBox">
-                    <h2 className="foods__title">Choose Dishes</h2>
-                    <button className="foods__btn">
-                        <i className='bx bx-chevron-down'></i>
-                        <span>Dine In</span>
-                    </button>
+                    <h2 className="foods__title">{t('Choose Dishes')}</h2>
+                    <select className="foods__langSelect" onClick={changeLanguage}>
+                        <option value="eng">Eng</option>
+                        <option value="ru">Ru</option>
+                        <option value="uz">Uz</option>
+                    </select>
                 </div>
                 <ul className="foods__list">
                     {cardArr.map((item) => {

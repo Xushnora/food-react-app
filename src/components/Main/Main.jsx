@@ -4,16 +4,19 @@ import RightBox from "../RightBox/RightBox"
 import Header from "./Header";
 import Hero from "./Hero";
 
-import obj from '../../foods.js'
 
-function Main(){
+function Main({
+    handlerClick, 
+    ordersArr, 
+    setOrdersArr, 
+    cardArr, 
+    setCardArr,
+    categoryBtn,
+    typeBtn,
+    changeLanguage
+}){
 
-    const [ordersArr, setOrdersArr] = useState([])
-    const [cardArr, setCardArr] = useState([])
 
-    useEffect(() => {
-        setCardArr(obj)
-    }, [])
 
     const ordersHandler = (food) => {
         let counte = ordersArr.filter(item => item.id === food.id);
@@ -32,6 +35,10 @@ function Main(){
                     setCardArr = {setCardArr}
                     cardArr = {cardArr}
                     ordersHandler = {ordersHandler}
+                    handlerClick = {handlerClick}
+                    categoryBtn = {categoryBtn}
+                    typeBtn = {typeBtn}
+                    changeLanguage = {changeLanguage}
                 />
             </div>
             <div>
